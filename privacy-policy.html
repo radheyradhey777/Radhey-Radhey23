@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Privacy Policy for Cloud Crash. Learn how we collect, use, and protect your personal information when you use our game server, VPS, and dedicated hosting services.">
+  <meta name="keywords" content="privacy policy, data protection, user privacy, Cloud Crash">
+  <meta name="author" content="Cloud Crash">
+  <meta name="robots" content="index, follow">
+  <title>Cloud Crash - Privacy Policy</title>
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  
+  <!-- Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Custom CSS to match the professional theme */
+    :root {
+      --primary: #1A1A1A;
+      --secondary: #674CC4;
+      --accent: #8E6CEF;
+      --deep-purple-blue: #4D2FDB;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+    }
+    .nav-link-underline {
+        position: relative;
+        text-decoration: none;
+    }
+    .nav-link-underline::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 50%;
+        background-color: var(--secondary);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+    .nav-link-underline:hover::after {
+        width: 100%;
+    }
+    /* Styles for the policy content */
+    .policy-content h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+    }
+    .policy-content h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    .policy-content p {
+        margin-bottom: 1rem;
+        line-height: 1.75;
+    }
+    .policy-content ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+    }
+    .policy-content li {
+        margin-bottom: 0.5rem;
+    }
+    .policy-content a {
+        color: var(--secondary);
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    .policy-content a:hover {
+        color: var(--accent);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section (Transferred Theme) -->
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3" aria-label="Cloud Crash Homepage">
+        <img src="/favicon.svg" alt="Cloud Crash Logo" class="h-9 w-9" />
+        <span class="text-2xl font-bold text-gray-800">Cloud Crash</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="/game-hosting" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Game Hosting</a>
+        <a href="/vps" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">VPS</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Dedicated</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Support</a>
+        <a href="#" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-indigo-600" aria-label="Toggle mobile menu" aria-expanded="false">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
+        <a href="/vps" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS</a>
+        <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Dedicated</a>
+        <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
+        <a href="#" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+      <div class="container mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Privacy Policy</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">
+          Your privacy is important to us. This policy explains how we handle your personal data.
+        </p>
+      </div>
+    </section>
+
+    <!-- Policy Content Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-6">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-4xl mx-auto policy-content">
+          <p class="text-gray-500"><strong>Last Updated:</strong> July 28, 2025</p>
+
+          <h2>1. Introduction</h2>
+          <p>Welcome to Cloud Crash. We are committed to protecting your privacy and handling your data in an open and transparent manner. This privacy policy sets out how we collect, use, disclose, and safeguard your information when you visit our website and use our services, including our game server hosting, VPS, and dedicated servers.</p>
+
+          <h2>2. Information We Collect</h2>
+          <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+          <h3>Personal Data</h3>
+          <p>Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site, such as online chat and message boards.</p>
+          <h3>Financial Data</h3>
+          <p>Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Site. We store only very limited, if any, financial information that we collect. Otherwise, all financial information is stored by our payment processor, [Payment Processor Name], and you are encouraged to review their privacy policy and contact them directly for responses to your questions.</p>
+
+          <h2>3. How We Use Your Information</h2>
+          <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
+          <ul>
+            <li>Create and manage your account.</li>
+            <li>Process your payments and refunds.</li>
+            <li>Email you regarding your account or order.</li>
+            <li>Fulfill and manage purchases, orders, payments, and other transactions related to the Site.</li>
+            <li>Monitor and analyze usage and trends to improve your experience with the Site.</li>
+            <li>Notify you of updates to the Site.</li>
+            <li>Offer new products, services, and/or recommendations to you.</li>
+          </ul>
+
+          <h2>4. Disclosure of Your Information</h2>
+          <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
+          <h3>By Law or to Protect Rights</h3>
+          <p>If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</p>
+
+          <h2>5. Security of Your Information</h2>
+          <p>We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+
+          <h2>6. Your Data Protection Rights</h2>
+          <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+          <ul>
+            <li>The right to access – You have the right to request copies of your personal data.</li>
+            <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate.</li>
+            <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+          </ul>
+
+          <h2>7. Contact Us</h2>
+          <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
+          <p>
+            Cloud Crash<br>
+            [Your Company Address]<br>
+            Meraganj, West Bengal, India<br>
+            <a href="mailto:privacy@ztxhosting.site">privacy@ztxhosting.site</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Transferred Theme) -->
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+        <a href="/terms-of-service" class="text-gray-400 hover:text-white transition-colors">Terms of service</a>
+        <a href="#" class="text-white transition-colors">Privacy policy</a>
+        <a href="/refund-policy" class="text-gray-400 hover:text-white transition-colors">Refund policy</a>
+      </nav>
+      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+        <p>&copy; <span id="copyright-year"></span> Cloud Crash | All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Mobile menu toggle ---
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+          mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('hidden');
+          // Toggle icon
+          mobileMenuBtn.innerHTML = !isExpanded 
+            ? `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>`
+            : `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>`;
+        });
+      }
+
+      // --- Dynamic Copyright Year ---
+      const copyrightYearEl = document.getElementById('copyright-year');
+      if (copyrightYearEl) {
+        copyrightYearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+
+</body>
+</html>
+
