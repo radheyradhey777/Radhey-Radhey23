@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="description" content="Premium Minecraft Server Hosting with instant setup, full mod support, and 24/7 expert assistance. Choose the perfect plan for your community.">
   <meta name="keywords" content="Minecraft hosting, minecraft server host, cheap minecraft hosting, best minecraft hosting, modded minecraft hosting">
-  <meta name="author" content="Cloud Crash">
+  <meta name="author" content="CoRamTix">
   <meta name="robots" content="index, follow">
-  <title>Cloud Crash - Premium Minecraft Hosting</title>
+  <title>CoRamTix - Premium Minecraft Hosting</title>
 
   <!-- Favicon and Touch Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -36,6 +36,7 @@
       font-family: 'Poppins', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      background-color: #f7fafc; /* Tailwind gray-100 */
     }
     .hero-gradient {
       background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
@@ -71,6 +72,7 @@
     /* Plan Card Styling */
     .plan-card {
         transition: all 0.3s ease;
+        background-color: white;
     }
     .plan-card:hover {
         transform: translateY(-8px);
@@ -89,16 +91,19 @@
         border: 2px solid var(--secondary);
         transform: scale(1.05);
     }
+    .plan-card.featured:hover {
+        transform: scale(1.05) translateY(-8px);
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Header Section (Transferred from source) -->
+  <!-- Header Section -->
   <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="flex items-center gap-3" aria-label="Cloud Crash Homepage">
-        <img src="/favicon.svg" alt="Cloud Crash Logo" class="h-9 w-9" />
-        <span class="text-2xl font-bold text-gray-800">Cloud Crash</span>
+      <a href="/" class="flex items-center gap-3" aria-label="CoRamTix Homepage">
+        <img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
+        <span class="text-2xl font-bold text-gray-800">CoRamTix</span>
       </a>
       
       <!-- Desktop Navigation -->
@@ -109,17 +114,17 @@
             <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           </button>
           <div class="absolute mt-2 w-48 bg-white rounded-md shadow-lg z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Minecraft Hosting</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Rust Hosting</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">ARK Hosting</a>
-            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">CS:GO Hosting</a>
-            <a href="#" class="block px-4 py-3 text-sm font-semibold text-indigo-600 hover:bg-gray-100">View All Games</a>
+            <a href="/minecraft-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Minecraft Hosting</a>
+            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Rust Hosting</a>
+            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">ARK Hosting</a>
+            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">CS:GO Hosting</a>
+            <a href="/game-hosting" class="block px-4 py-3 text-sm font-semibold text-indigo-600 hover:bg-gray-100">View All Games</a>
           </div>
         </div>
-        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">VPS</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Dedicated</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Support</a>
-        <a href="#" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+        <a href="/vps" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">VPS</a>
+        <a href="/dedicated" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Dedicated</a>
+        <a href="/support" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Support</a>
+        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -132,9 +137,9 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
         <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
         <a href="/vps" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS</a>
-        <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Dedicated</a>
-        <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
-        <a href="#" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+        <a href="/dedicated" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Dedicated</a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
+        <a href="/login" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
     </div>
   </header>
 
@@ -142,8 +147,8 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-white">
       <div class="container mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 fade-in-up visible">Minecraft Server Hosting</h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 fade-in-up visible" style="transition-delay: 150ms;">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 fade-in-up">Minecraft Server Hosting</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 fade-in-up" style="transition-delay: 150ms;">
           Unleash unparalleled performance with our high-speed, reliable Minecraft servers, backed by 24/7 expert support.
         </p>
       </div>
@@ -153,71 +158,157 @@
     <section id="all-plans" class="py-20 animated-section">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3 fade-in-up">Choose Your Perfect Plan</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3 fade-in-up">Minecraft Hosting Plans</h2>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in-up" style="transition-delay: 100ms;">Scalable plans designed for every type of Minecraft community, from small survival servers to large networks.</p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          <!-- Dynamically generated plan cards would go here. For this example, I'll create a few manually. -->
-          
-          <!-- Plan Card: Grass -->
-          <div class="plan-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 200ms;">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Grass Plan</h3>
-            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹130<span class="text-lg font-medium text-gray-500">/mo</span></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Dirt Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 200ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Dirt Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹100<span class="text-lg font-medium text-gray-500">/mo</span></div>
             <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>RAM:</strong> 3 GB</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>CPU:</strong> 100%</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Disk:</strong> 8 GB NVMe</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Backups:</strong> 0 Slot</li>
+              <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 2 GB</li>
+              <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 100%</li>
+              <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 5 GB NVMe</li>
             </ul>
             <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
           </div>
 
-          <!-- Plan Card: Stone (Featured) -->
-          <div class="plan-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col relative overflow-hidden fade-in-up featured" style="transition-delay: 300ms;">
+          <!-- Grass Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 300ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Grass Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹150<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
+              <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 4 GB</li>
+              <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 150%</li>
+              <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 8 GB NVMe</li>
+            </ul>
+            <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
+          </div>
+
+          <!-- Stone Plan (Featured) -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col relative overflow-hidden fade-in-up featured" style="transition-delay: 400ms;">
             <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-8 py-1 transform translate-x-1/4 rotate-45">Popular</div>
             <h3 class="text-2xl font-bold text-indigo-600 mb-4">Stone Plan</h3>
             <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹270<span class="text-lg font-medium text-gray-500">/mo</span></div>
             <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>RAM:</strong> 6 GB</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>CPU:</strong> 200%</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Disk:</strong> 15 GB NVMe</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Backups:</strong> 1 Slots</li>
+              <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 6 GB</li>
+              <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 200%</li>
+              <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 15 GB NVMe</li>
             </ul>
             <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
           </div>
 
-          <!-- Plan Card: Iron -->
-          <div class="plan-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 400ms;">
+          <!-- Coal Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 500ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Coal Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹350<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
+                <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 8 GB</li>
+                <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 220%</li>
+                <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 20 GB NVMe</li>
+            </ul>
+            <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
+          </div>
+
+          <!-- Iron Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 600ms;">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Iron Plan</h3>
             <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹540<span class="text-lg font-medium text-gray-500">/mo</span></div>
             <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>RAM:</strong> 12 GB</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>CPU:</strong> 300%</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Disk:</strong> 30 GB NVMe</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Backups:</strong> 1 Slots</li>
+              <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 12 GB</li>
+              <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 300%</li>
+              <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 30 GB NVMe</li>
             </ul>
             <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
           </div>
 
-          <!-- Plan Card: Diamond -->
-          <div class="plan-card bg-white rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 500ms;">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Diamond Plan</h3>
-            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹1080<span class="text-lg font-medium text-gray-500">/mo</span></div>
+          <!-- Gold Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 700ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Gold Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹700<span class="text-lg font-medium text-gray-500">/mo</span></div>
             <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>RAM:</strong> 24 GB</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>CPU:</strong> 400%</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Disk:</strong> 50 GB NVMe</li>
-              <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i><strong>Backups:</strong> 1 Slots</li>
+                <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 16 GB</li>
+                <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 350%</li>
+                <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 40 GB NVMe</li>
             </ul>
             <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
           </div>
+
+          <!-- Diamond Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 800ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Diamond Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹1080<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
+              <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 24 GB</li>
+              <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 400%</li>
+              <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 50 GB NVMe</li>
+            </ul>
+            <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
+          </div>
+
+          <!-- Obsidian Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 900ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Obsidian Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹1590<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
+                <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 32 GB</li>
+                <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 700%</li>
+                <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 70 GB NVMe</li>
+            </ul>
+            <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
+          </div>
+
+          <!-- Netherite Plan -->
+          <div class="plan-card rounded-xl shadow-lg p-6 text-center flex flex-col fade-in-up" style="transition-delay: 1000ms;">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Netherite Plan</h3>
+            <div class="price text-4xl font-extrabold text-gray-900 mb-4">₹2990<span class="text-lg font-medium text-gray-500">/mo</span></div>
+            <ul class="text-left space-y-3 text-gray-600 mb-6 flex-grow">
+                <li class="flex items-center"><i class="fas fa-memory text-indigo-500 mr-2"></i><strong>RAM:</strong> 64 GB</li>
+                <li class="flex items-center"><i class="fas fa-microchip text-indigo-500 mr-2"></i><strong>CPU:</strong> 1000%</li>
+                <li class="flex items-center"><i class="fas fa-hdd text-indigo-500 mr-2"></i><strong>Storage:</strong> 120 GB NVMe</li>
+            </ul>
+            <a href="https://discord.gg/sDBbjb9VJ4" class="buy-button w-full text-white font-semibold py-3 px-4 rounded-lg mt-auto">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- Included with All Plans Section -->
+        <div class="mt-20 text-center animated-section">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 fade-in-up">Included with All Plans</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 200ms;">
+                    <i class="fas fa-bolt text-3xl text-indigo-500 mb-3"></i>
+                    <h4 class="text-xl font-semibold mb-2">Instant Setup</h4>
+                    <p class="text-gray-600">Your server is online within minutes of your purchase.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 300ms;">
+                    <i class="fas fa-shield-alt text-3xl text-indigo-500 mb-3"></i>
+                    <h4 class="text-xl font-semibold mb-2">DDoS Protection</h4>
+                    <p class="text-gray-600">Enterprise-level protection keeps your server safe.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 400ms;">
+                    <i class="fas fa-cogs text-3xl text-indigo-500 mb-3"></i>
+                    <h4 class="text-xl font-semibold mb-2">Easy Panel + FTP</h4>
+                    <p class="text-gray-600">Full control over your server files and settings.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 500ms;">
+                    <i class="fas fa-tachometer-alt text-3xl text-indigo-500 mb-3"></i>
+                    <h4 class="text-xl font-semibold mb-2">NVMe SSD Speed</h4>
+                    <p class="text-gray-600">Experience lightning-fast load times and performance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in-up" style="transition-delay: 600ms;">
+                    <i class="fas fa-headset text-3xl text-indigo-500 mb-3"></i>
+                    <h4 class="text-xl font-semibold mb-2">24/7 Support</h4>
+                    <p class="text-gray-600">Our expert team is always here to help you out.</p>
+                </div>
+            </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer (Transferred from source) -->
+  <!-- Footer -->
   <footer class="bg-gray-800 text-white">
     <div class="container mx-auto px-6 py-12">
       <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
@@ -226,7 +317,7 @@
         <a href="/refund-policy" class="text-gray-400 hover:text-white transition-colors">Refund policy</a>
       </nav>
       <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
-        <p>&copy; <span id="copyright-year">2022</span> Cloud Crash — Premium Game Hosting, VPS, and Bot Hosting</p>
+        <p>&copy; <span id="copyright-year">2025</span> CoRamTix — Premium Game Hosting, VPS, and Bot Hosting</p>
       </div>
     </div>
   </footer>
@@ -248,7 +339,13 @@
         });
       }
 
-      // --- Scroll-triggered animations ---
+      // --- On-load animation for Hero section ---
+      const heroElements = document.querySelectorAll('.hero-gradient .fade-in-up');
+      heroElements.forEach(el => {
+        el.classList.add('visible');
+      });
+
+      // --- Scroll-triggered animations for other sections ---
       const animatedSections = document.querySelectorAll('.animated-section');
       const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
@@ -264,14 +361,6 @@
 
       animatedSections.forEach(section => {
           observer.observe(section);
-      });
-      
-      // Manually trigger animation for elements visible on load
-      document.querySelectorAll('.fade-in-up:not(.animated-section .fade-in-up)').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight && rect.bottom >= 0) {
-            el.classList.add('visible');
-        }
       });
 
       // --- Dynamic Copyright Year ---
