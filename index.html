@@ -10,9 +10,9 @@
   <title>CoRamTix - Game Server Hosting</title>
 
   <!-- Favicon and Touch Icons -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="https://placehold.co/32x32/674CC4/FFFFFF?text=C" />
+  <link rel="shortcut icon" href="https://placehold.co/32x32/674CC4/FFFFFF?text=C" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://placehold.co/180x180/674CC4/FFFFFF?text=C" />
   <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Open Graph / Facebook -->
@@ -20,7 +20,7 @@
   <meta property="og:url" content="">
   <meta property="og:title" content="CoRamTix - Game Server Hosting">
   <meta property="og:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
-  <meta property="og:image" content="/ccbanner.png">
+  <meta property="og:image" content="https://placehold.co/1200x630/4D2FDB/FFFFFF?text=CoRamTix+Hosting">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -28,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CoRamTix - Game Server Hosting">
   <meta name="twitter:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
-  <meta name="twitter:image" content="/ccbanner.png">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/4D2FDB/FFFFFF?text=CoRamTix+Hosting">
 
   <!-- Google Fonts and Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Custom CSS for advanced styling and animations */
+    /* Custom CSS for base styling */
     :root {
       --primary: #1A1A1A;
       --secondary: #674CC4;
@@ -50,83 +50,53 @@
       font-family: 'Poppins', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      background-color: #F9FAFB;
+      color: #1F2937;
     }
     .hero-gradient {
       background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
     }
-    .cta-button {
-      transition: all 0.3s ease;
-    }
     .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(142, 108, 239, 0.4);
+      /* Basic hover effect without transition */
+      filter: brightness(1.1);
     }
     .feature-card {
-      transition: all 0.3s ease;
+       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    .nav-link-underline {
-        position: relative;
-        text-decoration: none;
-    }
-    .nav-link-underline::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 50%;
-        background-color: var(--secondary);
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-    }
-    .nav-link-underline:hover::after {
-        width: 100%;
-    }
-    /* Animation for sections on scroll */
-    .fade-in-up {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-up.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .nav-link-underline:hover {
+        color: var(--secondary);
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Header Section -->
   <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3" aria-label="CoRamTix Homepage">
-        <img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
+        <img src="https://placehold.co/40x40/674CC4/FFFFFF?text=C" alt="CoRamTix Logo" class="h-9 w-9" />
         <span class="text-2xl font-bold text-gray-800">CoRamTix</span>
       </a>
       
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-2">
         <div class="relative group">
-          <button class="flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">
+          <button class="flex items-center gap-1.5 text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md nav-link-underline">
             Game Hosting
-            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
           </button>
-          <div class="absolute mt-2 w-48 bg-white rounded-md shadow-lg z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-            <a href="/minecraft-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Minecraft Hosting</a>
-            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Rust Hosting</a>
-            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">ARK Hosting</a>
-            <a href="/game-hosting" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">CS:GO Hosting</a>
-            <a href="/game-hosting" class="block px-4 py-3 text-sm font-semibold text-indigo-600 hover:bg-gray-100">View All Games</a>
+          <div class="absolute mt-2 w-48 bg-white rounded-md shadow-lg z-20 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Minecraft Hosting</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">Rust Hosting</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">ARK Hosting</a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-indigo-600">CS:GO Hosting</a>
+            <a href="#" class="block px-4 py-3 text-sm font-semibold text-indigo-600 hover:bg-gray-100">View All Games</a>
           </div>
         </div>
-        <a href="#vps-hosting" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">VPS</a>
-        <a href="#dedicated-servers" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Dedicated</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-md transition-colors nav-link-underline">Support</a>
-        <a href="#" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+        <a href="#vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS</a>
+        <a href="#dedicated-servers" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Dedicated</a>
+        <a href="#" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="#" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
       </nav>
 
       <!-- Mobile Menu Button -->
@@ -137,11 +107,11 @@
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
-        <a href="/vps" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS</a>
-        <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Dedicated</a>
+        <a href="#game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
+        <a href="#vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS</a>
+        <a href="#dedicated-servers" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Dedicated</a>
         <a href="#" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
-        <a href="#" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300">Login</a>
+        <a href="#" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
     </div>
   </header>
 
@@ -149,73 +119,73 @@
     <!-- Hero Section -->
     <section class="hero-gradient text-white overflow-hidden">
       <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight fade-in-up">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
           Premium Game Server Hosting
         </h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 fade-in-up" style="transition-delay: 0.2s;">
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8">
           Get ultra-low latency with 99.99% uptime guarantee and premium hardware for the best gaming experience.
         </p>
-        <a href="#" class="inline-block bg-white text-indigo-600 font-bold text-lg px-8 py-4 rounded-lg shadow-2xl cta-button fade-in-up" style="transition-delay: 0.4s;">
+        <a href="#" class="inline-block bg-white text-indigo-600 font-bold text-lg px-8 py-4 rounded-lg shadow-2xl cta-button">
           Get Started Now
         </a>
       </div>
     </section>
 
     <!-- Hosting Plan Sections -->
-    <div class="divide-y divide-gray-100">
-      <section id="game-hosting" class="py-20 animated-section">
+    <div class="divide-y divide-gray-100 bg-white">
+      <section id="game-hosting" class="py-20">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3 fade-in-up">Game Hosting Plans</h2>
-          <p class="text-lg text-gray-600 mb-6 fade-in-up" style="transition-delay: 100ms;">Perfect for Minecraft, Rust, ARK, CS:GO, and other popular games.</p>
-          <a href="/game-hosting" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button fade-in-up" style="transition-delay: 200ms;">View Plans</a>
+          <h2 class="text-3xl font-bold text-gray-800 mb-3">Game Hosting Plans</h2>
+          <p class="text-lg text-gray-600 mb-6">Perfect for Minecraft, Rust, ARK, CS:GO, and other popular games.</p>
+          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Plans</a>
         </div>
       </section>
-      <section id="vps-hosting" class="py-20 animated-section">
+      <section id="vps-hosting" class="py-20">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3 fade-in-up">VPS Hosting</h2>
-          <p class="text-lg text-gray-600 mb-6 fade-in-up" style="transition-delay: 100ms;">High-performance virtual private servers with full root access.</p>
-          <a href="/vps" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button fade-in-up" style="transition-delay: 200ms;">View Plans</a>
+          <h2 class="text-3xl font-bold text-gray-800 mb-3">VPS Hosting</h2>
+          <p class="text-lg text-gray-600 mb-6">High-performance virtual private servers with full root access.</p>
+          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Plans</a>
         </div>
       </section>
-      <section id="dedicated-servers" class="py-20 animated-section">
+      <section id="dedicated-servers" class="py-20">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3 fade-in-up">Dedicated Servers</h2>
-          <p class="text-lg text-gray-600 mb-6 fade-in-up" style="transition-delay: 100ms;">Enterprise-grade hardware with complete control.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button fade-in-up" style="transition-delay: 200ms;">View Plans</a>
+          <h2 class="text-3xl font-bold text-gray-800 mb-3">Dedicated Servers</h2>
+          <p class="text-lg text-gray-600 mb-6">Enterprise-grade hardware with complete control.</p>
+          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Plans</a>
         </div>
       </section>
     </div>
 
     <!-- Why Choose Us Section -->
     <section class="bg-gray-50 py-20">
-      <div class="container mx-auto px-6 animated-section">
+      <div class="container mx-auto px-6">
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 fade-in-up">Why Choose CoRamTix?</h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto fade-in-up" style="transition-delay: 100ms;">We provide the best infrastructure and support for your gaming needs.</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose CoRamTix?</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide the best infrastructure and support for your gaming needs.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="feature-card bg-white rounded-xl p-8 text-center shadow-lg fade-in-up" style="transition-delay: 200ms;">
+          <div class="feature-card bg-white rounded-xl p-8 text-center">
             <div class="flex justify-center items-center mb-4 text-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-gray-800">High Performance</h3>
             <p class="text-gray-600">Latest generation hardware with NVMe storage for maximum speed.</p>
           </div>
-          <div class="feature-card bg-white rounded-xl p-8 text-center shadow-lg fade-in-up" style="transition-delay: 300ms;">
+          <div class="feature-card bg-white rounded-xl p-8 text-center">
             <div class="flex justify-center items-center mb-4 text-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-gray-800">DDoS Protection</h3>
             <p class="text-gray-600">Enterprise-grade protection against attacks and malicious traffic.</p>
           </div>
-          <div class="feature-card bg-white rounded-xl p-8 text-center shadow-lg fade-in-up" style="transition-delay: 400ms;">
+          <div class="feature-card bg-white rounded-xl p-8 text-center">
             <div class="flex justify-center items-center mb-4 text-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H17z" /></svg>
             </div>
             <h3 class="text-xl font-semibold mb-3 text-gray-800">24/7 Support</h3>
             <p class="text-gray-600">Our expert team is available around the clock to assist you.</p>
           </div>
-          <div class="feature-card bg-white rounded-xl p-8 text-center shadow-lg fade-in-up" style="transition-delay: 500ms;">
+          <div class="feature-card bg-white rounded-xl p-8 text-center">
             <div class="flex justify-center items-center mb-4 text-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m-9 9h18" /></svg>
             </div>
@@ -231,9 +201,9 @@
   <footer class="bg-gray-800 text-white">
     <div class="container mx-auto px-6 py-12">
       <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
-        <a href="terms-of-service" class="text-gray-400 hover:text-white transition-colors">Terms of service</a>
-        <a href="privacy-policy" class="text-gray-400 hover:text-white transition-colors">Privacy policy</a>
-        <a href="refund-policy" class="text-gray-400 hover:text-white transition-colors">Refund policy</a>
+        <a href="#" class="text-gray-400 hover:text-white">Terms of service</a>
+        <a href="#" class="text-gray-400 hover:text-white">Privacy policy</a>
+        <a href="#" class="text-gray-400 hover:text-white">Refund policy</a>
       </nav>
       <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
         <p>&copy; <span id="copyright-year">2022</span> CoRamTix — Premium Game Hosting, VPS, and Bot Hosting</p>
@@ -257,33 +227,6 @@
             : `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>`;
         });
       }
-
-      // --- On-load animation for Hero section ---
-      // The .visible class is added immediately on load for the hero elements.
-      const heroElements = document.querySelectorAll('.hero-gradient .fade-in-up');
-      heroElements.forEach(el => {
-        el.classList.add('visible');
-      });
-
-      // --- Scroll-triggered animations for other sections ---
-      const animatedSections = document.querySelectorAll('.animated-section');
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  // Find all elements within the section that need to be animated
-                  const elementsToAnimate = entry.target.querySelectorAll('.fade-in-up');
-                  elementsToAnimate.forEach(el => {
-                      el.classList.add('visible');
-                  });
-                  // Stop observing the section once it has been animated
-                  observer.unobserve(entry.target);
-              }
-          });
-      }, { threshold: 0.15 }); // Trigger when 15% of the section is visible
-
-      animatedSections.forEach(section => {
-          observer.observe(section);
-      });
 
       // --- Dynamic Copyright Year ---
       const copyrightYearEl = document.getElementById('copyright-year');
