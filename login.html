@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>CoRamTix - Client Login</title>
+  <meta name="description" content="Access your CoRamTix client area to manage your servers, view invoices, and contact support.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="CoRamTix - Client Login">
+  <meta property="og:description" content="Access your CoRamTix client area to manage your servers, view invoices, and contact support.">
+  <meta property="og:image" content="/ccbanner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoRamTix - Client Login">
+  <meta name="twitter:description" content="Access your CoRamTix client area to manage your servers, view invoices, and contact support.">
+  <meta name="twitter:image" content="/ccbanner.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
+    .nav-link-underline:hover { color: var(--secondary); }
+    .btn-spinner {
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+  
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CoRamTix</span></a>
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="game-hosting.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
+        <a href="bot-hosting.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="vps-hosting.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="support.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="login.html" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="game-hosting.html" class="block text-gray-600 hover:text-indigo-600 py-2">Game Hosting</a>
+        <a href="bot-hosting.html" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
+        <a href="vps-hosting.html" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
+        <a href="support.html" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
+        <a href="login.html" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    </div>
+  </header>
+
+  <main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md space-y-8">
+      <div>
+        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+        <p class="mt-2 text-center text-sm text-gray-600">
+          Or <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">create a new account</a>
+        </p>
+      </div>
+      <!-- Login Form -->
+      <form id="login-form" class="mt-8 space-y-6">
+        <!-- This div will be used to display success or error messages -->
+        <div id="message-area" class="text-center text-sm"></div>
+
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <label for="email-address" class="sr-only">Email address</label>
+            <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Email address">
+          </div>
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-3 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Password">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
+          </div>
+          <div class="text-sm">
+            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+          </div>
+        </div>
+
+        <div>
+          <button id="submit-button" type="submit" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+        <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+            <a href="terms-of-service.html" class="text-gray-400 hover:text-white">Terms of service</a>
+            <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy policy</a>
+            <a href="refund-policy.html" class="text-gray-400 hover:text-white">Refund policy</a>
+        </nav>
+        <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+            <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Mobile Menu Toggle ---
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      
+      // --- Dynamic Copyright Year ---
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+      // --- Login Form Logic ---
+      const loginForm = document.getElementById('login-form');
+      const messageArea = document.getElementById('message-area');
+      const submitButton = document.getElementById('submit-button');
+
+      loginForm.addEventListener('submit', function(event) {
+        // 1. Prevent the form from submitting the traditional way
+        event.preventDefault();
+
+        // 2. Clear previous messages and show a loading state
+        messageArea.textContent = '';
+        messageArea.className = 'text-center text-sm'; // Reset classes
+        submitButton.disabled = true;
+        submitButton.innerHTML = `<span class="btn-spinner h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>`;
+
+        // 3. Get user input
+        const email = document.getElementById('email-address').value;
+        const password = document.getElementById('password').value;
+
+        // 4. Basic Validation
+        if (email === '' || password === '') {
+          displayMessage('Please fill in both email and password.', 'error');
+          resetButton();
+          return; // Stop the function
+        }
+        
+        // 5. Simulate a network request (like talking to a server)
+        setTimeout(() => {
+          // --- THIS IS WHERE THE BACK-END LOGIC WOULD GO ---
+          // In a real application, you would send the email and password
+          // to a secure server to verify them against a database.
+          
+          // For this simulation, we'll just check for a "correct" user.
+          if (email === 'user@example.com' && password === 'password123') {
+            displayMessage('Success! Redirecting to your dashboard...', 'success');
+            // In a real app, you would redirect the user:
+            // window.location.href = '/dashboard.html'; 
+          } else {
+            displayMessage('Invalid email or password. Please try again.', 'error');
+          }
+          resetButton();
+        }, 1500); // Simulate a 1.5-second delay
+      });
+
+      function displayMessage(message, type) {
+        messageArea.textContent = message;
+        if (type === 'success') {
+          messageArea.classList.add('text-green-600');
+        } else if (type === 'error') {
+          messageArea.classList.add('text-red-600');
+        }
+      }
+
+      function resetButton() {
+        submitButton.disabled = false;
+        submitButton.innerHTML = `
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+            <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          Sign in`;
+      }
+
+    });
+  </script>
+</body>
+</html>
+
