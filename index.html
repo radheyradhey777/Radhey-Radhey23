@@ -30,15 +30,10 @@
   <meta name="twitter:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
   <meta name="twitter:image" content="/ccbanner.png">
   
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Styles -->
   <style>
     :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
     body { font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F9FAFB; color: #1F2937; }
@@ -50,34 +45,20 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!--
-  ================================================================================
-  COPYRIGHT (c) 2025 CoRamTix. All rights reserved.
-  
-  This code is the intellectual property of CoRamTix.
-  Unauthorized copying, modification, or distribution of this code is strictly
-  prohibited and may result in legal action.
-  ================================================================================
-  -->
-
   <!-- Header Section -->
   <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-3" aria-label="CoRamTix Homepage">
-        <!-- 
-          LOGO: Replace the 'src' attribute below with the URL to your own logo.
-          For example: src="https://your-website.com/logo.svg"
-        -->
-        <img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9 rounded-md" />
+        <img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
         <span class="text-2xl font-bold text-gray-800">CoRamTix</span>
       </a>
       
       <nav class="hidden md:flex items-center space-x-2">
-        <a href="#game-hosting-promo" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
-        <a href="#bot-hosting-promo" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
-        <a href="#vps-hosting-promo" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
-        <a href="#support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
-        <a href="#login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+        <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
+        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
       </nav>
 
       <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -86,50 +67,47 @@
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-        <a href="#game-hosting-promo" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
-        <a href="#bot-hosting-promo" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Bot Hosting</a>
-        <a href="#vps-hosting-promo" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS Hosting</a>
-        <a href="#support" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
-        <a href="#login" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Game Hosting</a>
+        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Bot Hosting</a>
+        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">VPS Hosting</a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 font-medium py-2">Support</a>
+        <a href="/login" class="block bg-indigo-600 text-white text-center font-medium mt-2 px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero-gradient text-white overflow-hidden">
       <div class="container mx-auto px-6 py-24 md:py-32 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Premium Server Hosting</h1>
         <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8">Get ultra-low latency with 99.99% uptime guarantee and premium hardware for your games, bots, and applications.</p>
-        <a href="#game-hosting-promo" class="inline-block bg-white text-indigo-600 font-bold text-lg px-8 py-4 rounded-lg shadow-2xl cta-button">Get Started Now</a>
+        <a href="/game-hosting" class="inline-block bg-white text-indigo-600 font-bold text-lg px-8 py-4 rounded-lg shadow-2xl cta-button">Get Started Now</a>
       </div>
     </section>
 
-    <!-- Hosting Promo Sections -->
     <div class="divide-y divide-gray-100 bg-white">
       <section id="game-hosting-promo" class="py-20">
         <div class="container mx-auto px-6 text-center">
           <h2 class="text-3xl font-bold text-gray-800 mb-3">Game Hosting Plans</h2>
           <p class="text-lg text-gray-600 mb-6">Perfect for Minecraft, Rust, FiveM, and other popular games.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Game Plans</a>
+          <a href="/game-hosting" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Game Plans</a>
         </div>
       </section>
       <section id="bot-hosting-promo" class="py-20">
         <div class="container mx-auto px-6 text-center">
           <h2 class="text-3xl font-bold text-gray-800 mb-3">Bot Hosting</h2>
           <p class="text-lg text-gray-600 mb-6">Reliable, 24/7 hosting for your Discord bots and other applications.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Bot Plans</a>
+          <a href="/bot-hosting" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View Bot Plans</a>
         </div>
       </section>
       <section id="vps-hosting-promo" class="py-20">
         <div class="container mx-auto px-6 text-center">
           <h2 class="text-3xl font-bold text-gray-800 mb-3">VPS Hosting</h2>
           <p class="text-lg text-gray-600 mb-6">High-performance virtual private servers with full root access.</p>
-          <a href="#" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View VPS Plans</a>
+          <a href="/vps-hosting" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg cta-button">View VPS Plans</a>
         </div>
       </section>
     </div>
 
-    <!-- Why Choose Us Section -->
     <section class="bg-gray-50 py-20">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
@@ -162,13 +140,12 @@
     </section>
   </main>
 
-  <!-- Footer Section -->
   <footer class="bg-gray-800 text-white">
     <div class="container mx-auto px-6 py-12">
       <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
-        <a href="#" class="text-gray-400 hover:text-white">Terms of service</a>
-        <a href="#" class="text-gray-400 hover:text-white">Privacy policy</a>
-        <a href="#" class="text-gray-400 hover:text-white">Refund policy</a>
+        <a href="/terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
+        <a href="/privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
+        <a href="/refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
       </nav>
       <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
         <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
@@ -176,23 +153,8 @@
     </div>
   </footer>
 
-  <!-- Protection Script -->
-  <script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // Disable specific key combinations
-    document.onkeydown = function(e) {
-      if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
-        return false;
-      }
-    };
-  </script>
-
-  <!-- App Logic Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Mobile menu toggle functionality
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenuBtn && mobileMenu) {
@@ -205,10 +167,34 @@
             : `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>`;
         });
       }
-      
-      // Set copyright year dynamically
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
+  </script>
+
+  <!-- Protection Script to prevent easy code theft -->
+  <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable specific key combinations for developer tools
+    document.onkeydown = function(e) {
+      // Disable F12
+      if (e.keyCode == 123) {
+        return false;
+      }
+      // Disable Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      // Disable Ctrl+Shift+J
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      // Disable Ctrl+U (View Source)
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+    };
   </script>
 
 </body>
