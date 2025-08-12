@@ -30,17 +30,18 @@
   <meta name="twitter:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
   <meta name="twitter:image" content="/ccbanner.png">
   
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F9FAFB; color: #1F2937; }
+    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
+    .cta-button:hover { filter: brightness(1.1); }
+    .feature-card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+    .nav-link-underline:hover { color: var(--secondary); }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -177,7 +178,20 @@
 
     // Disable specific key combinations for developer tools
     document.onkeydown = function(e) {
-      if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+      // Disable F12
+      if (e.keyCode == 123) {
+        return false;
+      }
+      // Disable Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      // Disable Ctrl+Shift+J
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      // Disable Ctrl+U (View Source)
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
       }
     };
