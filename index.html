@@ -30,18 +30,16 @@
   <meta name="twitter:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
   <meta name="twitter:image" content="/ccbanner.png">
   
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
-    body { font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: #F9FAFB; color: #1F2937; }
-    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
-    .cta-button:hover { filter: brightness(1.1); }
-    .feature-card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
-    .nav-link-underline:hover { color: var(--secondary); }
-  </style>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -76,6 +74,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero-gradient text-white overflow-hidden">
       <div class="container mx-auto px-6 py-24 md:py-32 text-center">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Premium Server Hosting</h1>
@@ -84,6 +83,7 @@
       </div>
     </section>
 
+    <!-- Hosting Promo Sections -->
     <div class="divide-y divide-gray-100 bg-white">
       <section id="game-hosting-promo" class="py-20">
         <div class="container mx-auto px-6 text-center">
@@ -108,6 +108,7 @@
       </section>
     </div>
 
+    <!-- Why Choose Us Section -->
     <section class="bg-gray-50 py-20">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
@@ -140,6 +141,7 @@
     </section>
   </main>
 
+  <!-- Footer Section -->
   <footer class="bg-gray-800 text-white">
     <div class="container mx-auto px-6 py-12">
       <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
@@ -153,8 +155,10 @@
     </div>
   </footer>
 
+  <!-- JavaScript for Mobile Menu and Copyright Year -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu toggle functionality
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenuBtn && mobileMenu) {
@@ -162,11 +166,14 @@
           const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
           mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
           mobileMenu.classList.toggle('hidden');
+          // Change icon based on menu state
           mobileMenuBtn.innerHTML = !isExpanded 
             ? `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>`
             : `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>`;
         });
       }
+      
+      // Set copyright year dynamically
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
   </script>
