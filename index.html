@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta name="og:title" content="CoRamTix">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <meta name="description" content="CoRamTix Hosting – Game Servers, VPS & Bot Hosting with 24/7 uptime, smooth performance, and affordable prices.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CoRamTix Hosting – High-performance game servers, VPS, & bot hosting with 24/7 uptime, low latency, and affordable prices.">
   <meta name="keywords" content="game server hosting, bot hosting, discord bot hosting, Minecraft hosting, Rust hosting, ARK hosting, VPS hosting, low latency, DDoS protection">
   <meta name="author" content="CoRamTix">
   <meta name="robots" content="index, follow">
@@ -16,7 +15,7 @@
   <link rel="manifest" href="/site.webmanifest" />
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
+  <meta property="og:url" content="https://yourwebsite.com">
   <meta property="og:title" content="CoRamTix - Game Server Hosting">
   <meta property="og:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
   <meta property="og:image" content="/ccbanner.png">
@@ -28,12 +27,13 @@
   <meta name="twitter:description" content="Powerful hosting for Minecraft, Rust, ARK, and more with 24/7 support. High-performance servers at affordable prices.">
   <meta name="twitter:image" content="/ccbanner.png">
   
+  <!-- In a production environment, you would self-host fonts to improve performance. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
-    /* CSS Variables */
     :root { 
       --primary: #1A1A1A; 
       --secondary: #674CC4; 
@@ -41,24 +41,21 @@
       --deep-purple-blue: #4D2FDB; 
     }
     
-    /* General Body Styles */
     body { 
       font-family: 'Poppins', sans-serif; 
-      -webkit-font-smoothing: antialiased; 
-      -moz-osx-font-smoothing: grayscale; 
       background-color: #F9FAFB; 
       color: #1F2937; 
-      overflow: hidden; /* Hide scrollbar during loading */
+      /* We now control overflow with JavaScript to prevent hidden content */
+      overflow-x: hidden; 
     }
 
-    /* Preloader Styles */
     #preloader {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: #F9FAFB;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -67,8 +64,8 @@
     }
 
     .loader {
-      border: 8px solid #f3f3f3;
-      border-top: 8px solid #3498db;
+      border: 8px solid #E5E7EB;
+      border-top: 8px solid var(--secondary);
       border-radius: 50%;
       width: 60px;
       height: 60px;
@@ -80,28 +77,39 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Hide Content Initially */
+    /* We hide content with opacity for a smoother transition */
     #content-wrapper {
-        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
     }
 
-    /* Existing Tailwind-related styles */
     .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
     .cta-button:hover { filter: brightness(1.1); }
     .feature-card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
     .nav-link-underline:hover { color: var(--secondary); }
+    
+    /* Accessibility: Add focus styles for keyboard navigation */
+    .nav-link-underline:focus { outline: 2px solid var(--secondary); outline-offset: 2px; }
+    .cta-button:focus, .bg-indigo-600:focus { outline: 2px solid #fff; outline-offset: 2px; }
+    
+    /* Accessibility: Ensure sufficient color contrast for text */
+    .text-gray-600 { color: #4B5563; }
+    .text-gray-800 { color: #1F2937; }
   </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
+  <!-- Preloader -->
   <div id="preloader">
     <div class="loader"></div>
   </div>
 
-  <div id="content-wrapper">
+  <!-- Main Content Wrapper -->
+  <div id="content-wrapper" class="min-h-screen">
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" class="flex items-center gap-3" aria-label="CoRamTix Homepage">
+          <!-- The 'src' attribute should point to the public path of your logo file -->
           <img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
           <span class="text-2xl font-bold text-gray-800">CORAMTIX</span>
         </a>
@@ -209,7 +217,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Mobile menu and copyright script
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       if (mobileMenuBtn && mobileMenu) {
@@ -225,22 +232,20 @@
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
 
-    // New script for the preloader
-    window.onload = function() {
-      const preloader = document.getElementById('preloader');
-      const contentWrapper = document.getElementById('content-wrapper');
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      const content = document.getElementById("content-wrapper");
       
-      // Hide the preloader with a fade effect
-      preloader.style.opacity = '0';
-      
-      // After the fade, remove the preloader and show the content
-      setTimeout(() => {
-        preloader.style.display = 'none';
-        contentWrapper.style.display = 'block';
-        document.body.style.overflow = 'auto'; // Re-enable scrolling
-      }, 500); // 500ms should match the transition duration
-    };
+      if (preloader && content) {
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+          content.style.opacity = "1";
+        }, 500); 
+      }
+    });
   </script>
 
 </body>
 </html>
+
